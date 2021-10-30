@@ -12,6 +12,7 @@ import PrivateRoute from './Private/PrivateRoute';
 import AddnewService from './Components/AddNewService/AddnewService';
 import ManageAllOrder from './Components/ManageAllOrder/ManageAllOrder';
 import About from './Components/About/About';
+import UpdateBooking from './Components/UpdateBooking/UpdateBooking';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
         <PrivateRoute exact path="/addNewService">
             <AddnewService></AddnewService>
           </PrivateRoute>
+          <Route exact path="/update/:id">
+            <UpdateBooking></UpdateBooking>
+          </Route>
         <Route exact path="/login">
           <Login></Login>
         </Route>
