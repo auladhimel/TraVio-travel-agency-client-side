@@ -47,7 +47,7 @@ const ManageAllOrder = () => {
                                <small>{manageorders?.description}</small></span><br/>
                                <p><b>${manageorders?.price}</b></p><br/>
                                <p>Name:{user.displayName}</p>
-                               <p>Email:{user.email}</p>
+                               
                                
                                 
                                {/* <button className="btn btn-danger m-2">Delete</button> */}
