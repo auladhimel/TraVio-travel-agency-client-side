@@ -7,7 +7,7 @@ const UpdateBooking = () => {
     const [singleBooking,setSingleBooking]=useState({})
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch(`http://localhost:5000/update/${id}`,{
+        fetch(`https://frightful-asylum-08457.herokuapp.com/update/${id}`,{
             method:"PUT",
             headers:{"Content-Type":"application/json"},
             body: JSON.stringify(data)
@@ -19,7 +19,7 @@ const UpdateBooking = () => {
   
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/singleBooking/${id}`)
+        fetch(`https://frightful-asylum-08457.herokuapp.com/singleBooking/${id}`)
         .then(res=>res.json())
         .then(data=>setSingleBooking(data))
     },[])
@@ -29,24 +29,24 @@ const UpdateBooking = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
       
       {/* include validation with required or other standard HTML validation rules */}
-      <input defaultValue={singleBooking?.id} {...register("id", { required: true })} required placeholder="ID" /><br/>
+      <input className="m-2 p-2" defaultValue={singleBooking?.id} {...register("id", { required: true })} required placeholder="ID" /><br/>
 
       {/* include validation with required or other standard HTML validation rules */}
-      <input defaultValue={singleBooking?.name} {...register("name", { required: true })} required placeholder="Name" /><br/>
+      <input className="m-2 p-2" defaultValue={singleBooking?.name} {...register("name", { required: true })} required placeholder="Name" /><br/>
 
       {/* include validation with required or other standard HTML validation rules */}
-      <input defaultValue={singleBooking?.description} {...register("description", { required: true })} required placeholder="Description" /><br/>
+      <input className="m-2 p-2" defaultValue={singleBooking?.description} {...register("description", { required: true })} required placeholder="Description" /><br/>
 
       {/* include validation with required or other standard HTML validation rules */}
-      <input defaultValue={singleBooking?.image} {...register( "image",{ required: true })} required placeholder="Image" /><br/>
+      <input className="m-2 p-2" defaultValue={singleBooking?.image} {...register( "image",{ required: true })} required placeholder="Image" /><br/>
       
       {/* include validation with required or other standard HTML validation rules */}
-      <input defaultValue={singleBooking?.price} type="number" {...register("price",  { required: true })} required placeholder="Price" /><br/>
+      <input className="m-2 p-2" defaultValue={singleBooking?.price} type="number" {...register("price",  { required: true })} required placeholder="Price" /><br/>
       
       {/* errors will return when field validation fails  */}
       {errors.exampleRequired && <span>This field is required</span>}
       
-      <input type="submit" />
+      <input className="m-2 p-2 btn btn-primary" type="submit" />
     </form>
         </div>
     );

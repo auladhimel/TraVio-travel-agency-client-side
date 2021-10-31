@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Booking.css'
 
 const Booking = (props) => {
-    const{id,name, description,image,price}=props.service
+    const{_id,id,name, description,image,price}=props.service
     return (
         <div className="col-md-3 service justify-content-center">
              
@@ -16,7 +16,7 @@ const Booking = (props) => {
                         <span id="description">
                     <small>{description}</small></span><br/>
                     <p><b>${price}</b></p><br/>
-                    <Link to={`/details/${id}`} className="detailsLink">
+                    <Link to={`/userBooking/${_id}`} className="detailsLink">
                     <button className="btn btn-primary">Click here to book</button>
                     </Link>
                     </Card.Text>  

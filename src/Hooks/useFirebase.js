@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAuth, signInWithPopup,  signOut, GoogleAuthProvider,onAuthStateChanged } from "firebase/auth";
 import firebaseIntializeApp from '../Firebase/Firebase.init';
+import { useHistory, useLocation } from 'react-router';
 
 firebaseIntializeApp() 
 const useFirebase = () => {
@@ -8,13 +9,17 @@ const useFirebase = () => {
     const provider = new GoogleAuthProvider();
     const[user,setUser] =useState({})
     const [error, setError] = useState("");
-    const[isLoading, setIsLoading]=useState(true)
+    const[isLoading, setIsLoading]=useState(true);
+
+    
     //  login with google 
 
     const loginWithGoogle=()=>{
         setIsLoading(true);
-        signInWithPopup(auth, provider)
-        .then(result=>{setUser(result.user)})
+      return  signInWithPopup(auth, provider)
+        .then(result=>{
+          setUser(result.user) ;
+        })
         .finally(()=>setIsLoading(false));
         
     }

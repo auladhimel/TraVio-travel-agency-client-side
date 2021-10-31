@@ -1,0 +1,26 @@
+[debug] [2021-10-31T17:01:34.985Z] ----------------------------------------------------------------------
+[debug] [2021-10-31T17:01:34.988Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\istiak shishir\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-10-31T17:01:34.988Z] CLI Version:   9.21.0
+[debug] [2021-10-31T17:01:34.988Z] Platform:      win32
+[debug] [2021-10-31T17:01:34.988Z] Node Version:  v14.17.1
+[debug] [2021-10-31T17:01:34.989Z] Time:          Sun Oct 31 2021 23:01:34 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-10-31T17:01:34.989Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-31T17:01:34.992Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-10-31T17:01:35.022Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-31T17:01:35.023Z] > authorizing via signed-in user (istiak.shishir26615@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\projects\tourism-or-delivery-website-client-side-istiak26615
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+

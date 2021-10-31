@@ -13,6 +13,9 @@ import AddnewService from './Components/AddNewService/AddnewService';
 import ManageAllOrder from './Components/ManageAllOrder/ManageAllOrder';
 import About from './Components/About/About';
 import UpdateBooking from './Components/UpdateBooking/UpdateBooking';
+import Blogs from './Components/Blogs/Blogs';
+import Gallery from './Components/Gallery/Gallery';
+import UserBooking from './Components/UserBooking/UserBooking';
 
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
         <Route exact path="/">
           <Banner></Banner>
           <Bookings></Bookings>
+          <Blogs></Blogs>
+          <Gallery></Gallery>
 
         </Route>
         <PrivateRoute exact path="/myorder">
@@ -35,9 +40,12 @@ function App() {
         <PrivateRoute exact path="/addNewService">
             <AddnewService></AddnewService>
           </PrivateRoute>
-          <Route exact path="/update/:id">
+          <Route  path="/update/:id">
             <UpdateBooking></UpdateBooking>
           </Route>
+          <PrivateRoute exact  path="/userBooking/:id">
+            <UserBooking></UserBooking>
+          </PrivateRoute>
         <Route exact path="/login">
           <Login></Login>
         </Route>

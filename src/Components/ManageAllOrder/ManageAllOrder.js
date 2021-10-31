@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 const ManageAllOrder = () => {
-    const[manageAllOrder, setManageAllOrder]=useState([])
+  const {user }=useAuth();
+  const[manageorder, setManageOrder]=useState([])
     const [isDelete, setIsDelete] = useState(null);
     useEffect(()=>{
-        fetch('http://localhost:5000/bookings')
+        fetch('https://frightful-asylum-08457.herokuapp.com/userBooking')
         .then(res=>res.json())
-        .then(data=>setManageAllOrder(data))
+        .then(data=>setManageOrder(data))
     },[isDelete]);
 
     const handleDelete = (id) => {
         console.log(id)
-        fetch(`http://localhost:5000/deleteProduct/${id}`, {
+        fetch(`https://frightful-asylum-08457.herokuapp.com/deleteMyorder/${id}`, {
       method: "DELETE",
       headers: { "Content-type": "application/json" },
     })
@@ -27,27 +28,31 @@ const ManageAllOrder = () => {
           }
       });
       };
-    return (
-        <div>
-            <h1>manage order</h1>
+
+  return (
+    <div>
+      <div>
+            <h1>Manage All order</h1>
             <div className="all-bookings">
                 <div className="row container text-center justify-content-center">
-                     {manageAllOrder.map((manageOrders, index)=>(
+                     {manageorder.map((manageorders, index)=>(
                          <div className="col-md-3 service justify-content-center">
              
                          <Card style={{ width: '18rem'}} className="fullcard" >
-                           <Card.Img className="card-img" variant="top" src={manageOrders?.image} />
+                           <Card.Img className="card-img" variant="top" src={manageorders?.image} />
                            <Card.Body className="bg-light text-black rounded-bottom text-start cardbody">
-                               <Card.Title>{manageOrders?.name}</Card.Title>
+                               <Card.Title>{manageorders?.name}</Card.Title>
                                <Card.Text>
                                    <span id="description">
-                               <small>{manageOrders?.description}</small></span><br/>
-                               <p><b>${manageOrders?.price}</b></p><br/>
+                               <small>{manageorders?.description}</small></span><br/>
+                               <p><b>${manageorders?.price}</b></p><br/>
+                               <p>Name:{user.displayName}</p>
+                               <p>Email:{user.email}</p>
                                
-                                <Link to={`/update/${manageOrders._id}`}>
-                               <button  className="btn btn-primary m-2">Update</button></Link>
-                               <button onClick={()=>handleDelete(manageOrders._id)} className="btn btn-danger m-2">Delete</button>
-                               {/* <button className="btn btn-primary">Click here to book</button> */}
+                                
+                               {/* <button className="btn btn-danger m-2">Delete</button> */}
+                               <button onClick={()=>handleDelete(manageorders._id)} className="btn btn-danger m-2">Delete</button>
+                               
                                
                                </Card.Text>  
                            </Card.Body>
@@ -59,7 +64,8 @@ const ManageAllOrder = () => {
                 </div>
             </div>
         </div>
-    );
+    </div>
+  );
 };
 
 export default ManageAllOrder;
