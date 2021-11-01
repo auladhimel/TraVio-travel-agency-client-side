@@ -2,3 +2,13 @@
     height: 100%;
     width: 100%;
 }
+.about-info{
+    
+    font-family: 'Dancing Script', cursive;
+}
+.text{
+    padding-top: 80px;
+}
+.text p{
+    font-size: 20px;
+}

@@ -1,3 +1,53 @@
 .banner-img img{
     width: 100%;
 }
+/* slider style  */
+.slider{
+    font-family: 'Dancing Script', cursive;
+    height: 550px;
+    background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2017/05/30/1091257/8262ee2d03448882347ae3dfeba4e21f-700.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    margin-bottom: 50px;
+}
+.slider img{
+    opacity:92%;  
+}
+/* caption style  */
+.caption{
+    font-family: 'Dancing Script', cursive;
+    padding-top: 100px;
+    padding-left: 100px;
+    justify-content: left;
+    text-align: left;
+    margin-bottom: 200px;
+}
+.caption h1,h4{
+    font-family: 'Dancing Script', cursive;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.caption h4{
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/* button style  */
+.button{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 30px;
+    padding: 20px 36px;
+    background-color: #061A3A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+.button:hover{
+    color: #061A3A;
+    background-color: violet;
+    transition:  0.5s ease;
+}

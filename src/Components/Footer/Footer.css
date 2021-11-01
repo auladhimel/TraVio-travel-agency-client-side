@@ -1,6 +1,7 @@
 .footer{
-    color: black;
-    background-color: rgb(70, 211, 70);
+    padding-top: 40px;
+    color: rgb(201, 201, 201);
+    background-color: #061A3A;
 }
 
 .footer-img img{

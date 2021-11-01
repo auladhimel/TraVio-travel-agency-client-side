@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDWmyt0nVFB1qGudlZztfXKAeKZwnIKYSc",
-    authDomain: "travelpoka-fullstack.firebaseapp.com",
-    projectId: "travelpoka-fullstack",
-    storageBucket: "travelpoka-fullstack.appspot.com",
-    messagingSenderId: "81153413079",
-    appId: "1:81153413079:web:3c5339af8b9a0832bc8592"
-  };
+  apiKey: "AIzaSyBIrKgDthIbM1mXUYamTRdBBrN0PfYKU3g",
+  authDomain: "travel-agency-travio-92c8c.firebaseapp.com",
+  projectId: "travel-agency-travio-92c8c",
+  storageBucket: "travel-agency-travio-92c8c.appspot.com",
+  messagingSenderId: "385773704370",
+  appId: "1:385773704370:web:1bdf9270936ea8008825ab"
+};
 
-  export default firebaseConfig;
+export default firebaseConfig;
