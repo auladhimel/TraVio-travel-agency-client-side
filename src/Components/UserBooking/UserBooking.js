@@ -5,7 +5,7 @@ import useAuth from '../../Hooks/useAuth';
 
 const UserBooking = () => {
     const { user } = useAuth();
-    const { id } = useParams()
+    const { id } = useParams();
     const [singleBooking, setSingleBooking] = useState({})
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
